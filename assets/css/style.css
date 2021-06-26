@@ -7,7 +7,7 @@ body {
     /* more on this crazy alphanumerical value in a minute! */
     color: #39a6b2;
     font-family: Helvetica, Arial, sans-serif;
-
+    
 
     
 }
@@ -73,9 +73,7 @@ section {
 .hero {
     background-image: url("../images/hero-bg.jpeg");
     height: 600px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    
 }
 /* Hero Style End */
 

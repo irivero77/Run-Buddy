@@ -17,6 +17,15 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
 }
 
 header h1 {
@@ -81,16 +90,20 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+    background-position: 80%;
+    background-attachment: fixed;
 }
 /* Hero Style End */
 
 .hero-form {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 3px solid #024e76;
     background-color:#fce138;
     padding: 20px;
     color: #024e76;
     width: 40%;
     margin: 3.5%;
+    border-radius: 15px;
 }
 
 .hero-form h3 {
@@ -124,6 +137,10 @@ section {
     font-size: 16px;
 }
 
+.hero-form button:hover {
+    background-color: #39a6b2;
+}
+
 .hero-cta {
     width: 35%;
     text-align: right;
@@ -134,6 +151,7 @@ section {
 }
 
 .hero-cta h2 {
+    text-shadow: 0 0 10x rgba(0, 0, 0, 0.5);
     font-style: italic;
     font-size: 55px;
     color: #fce138;    
@@ -171,11 +189,18 @@ section {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1px solid #39a6b2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content:  space-between;
+}
+
+.step:nth-child(even) {
+    border-bottom: 1px solid #39a6b2;
+}
+
+.step:not(:last-child) {
+    border-bottom: 1px solid #39a6b2;
 }
 
 .steps p {
@@ -331,12 +356,17 @@ section {
     font-size: 16px;
 }
 
+.contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
+}
+
 .contact-info a {
     color: #fce138;
 }
 
 @media screen and (max-width: 980px) {
-    header {
+    header postion-relative {
         padding-bottom: 0;
         justify-content: center;
     }
@@ -344,6 +374,7 @@ section {
 header h1 {
     width: 100%;
     text-align: center;
+    text-shadow: 0 0 10x rgba(0, 0, 0, 0.5);
 }
 
 header nav ul {
@@ -353,7 +384,15 @@ header nav ul {
 }
 
 header nav ul li a {
+    text-shadow: 0 0 10x rgba(0, 0, 0, 0.5);
     font-size: 20px
+}
+
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius:  15px;
+    text-shadow: none;
 }
 
 footer h2, footer div {
@@ -435,5 +474,38 @@ footer h2, footer div {
     .contact-form {
         order: 3;
     }
+}
+
+.some-class {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.form-input {
+    border-radius: 10px;
+}
+
+.hero-form button {
+    border-radius: 10px;
+
+}
+
+.contact-form input, .contact-form textarea {
+    border-radius: 10px;
+
+}
+
+.contact-form button {
+    border-radius: 10px;
+
+}
+
+.form-input {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.form-input:focus {
+    background-color: rgba(255, 255, 255, 1);
+    outline: none;
 }
 
